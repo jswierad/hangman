@@ -45,7 +45,7 @@ post '/games/:id' do
         g.tries_left -= 1
         g.register_letter(letter)
 
-        # You won before last try
+        # You won!
         unless g.check_letters.include? "."
             g.status = 1
         end
